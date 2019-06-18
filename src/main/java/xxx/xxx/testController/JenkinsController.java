@@ -12,7 +12,7 @@ public class JenkinsController {
     }
     @RequestMapping("/jenkinsQuartz")
     public String jenkinsQuartz(){
-        System.out.println("测试完成--jenkins定时任务自动部署完成");
-        return "测试完成--jenkins定时任务自动部署完成";
+        System.out.println("测试完成--jenkins定时任务自动部署完成qqqq");
+        return "测试完成--jenkins定时任务自动部署完成qqqqq";
     }
 }
