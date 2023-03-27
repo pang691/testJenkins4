@@ -27,7 +27,6 @@ pipeline {
         stage('Clone') {
             steps {
                 checkout scm
-
                 script {
                     pom = readMavenPom file: 'pom.xml'
                     img_name = "${pom.groupId}-${pom.artifactId}"
@@ -49,11 +48,7 @@ pipeline {
             }
         }
 
-        stage('发布') {
-            steps {
-                
-            }
-        }
+        
 
         stage('上传镜像') {
             steps {
