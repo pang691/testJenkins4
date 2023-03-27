@@ -52,7 +52,7 @@ pipeline {
 
         stage('上传镜像') {
             steps {
-                sh "java -jar app.jar"
+               sh "java -jar ./target/jenkins-test-${imagesVersion}.jar"
             }
         }
 
