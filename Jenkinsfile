@@ -1,7 +1,7 @@
-def name = "g1cloud-provider-bgtpm"
+def name = "jenkins-test"
 def imagesName = "g1cloud/${name}"
 def url = "192.168.21.125:20015"
-def appName = "develop2.0-bgtpm"
+def appName = "jenkins1-test"
 def skywalkingUrl="192.168.21.125:11800"
 def pom
 def img_name
@@ -51,7 +51,7 @@ pipeline {
 
         stage('发布') {
             steps {
-                sh "mvn deploy"
+                
             }
         }
 
