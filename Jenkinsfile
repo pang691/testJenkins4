@@ -42,17 +42,17 @@ pipeline {
             }
         }
 
-        stage('编译') {
+        stage('build') {
             steps {
-                sh "mvn -U clean package"
+                bat "mvn -U clean package"
             }
         }
 
         
 
-        stage('上传镜像') {
+        stage('start') {
             steps {
-               sh "java -jar ./target/jenkins-test-${imagesVersion}.jar"
+               bat "java -jar ./target/jenkins-test-${imagesVersion}.jar"
             }
         }
 
