@@ -44,7 +44,7 @@ pipeline {
 
         stage('build') {
             steps {
-                bat "mvn -U clean package"
+                sh "mvn -U clean package"
             }
         }
 
@@ -52,7 +52,7 @@ pipeline {
 
         stage('start') {
             steps {
-               bat "java -jar ./target/jenkins-test-${imagesVersion}.jar"
+               sh "java -jar ./target/jenkins-test-${imagesVersion}.jar"
             }
         }
 
