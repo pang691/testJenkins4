@@ -52,7 +52,7 @@ pipeline {
 
         stage('start') {
             steps {
-               sh "nohup java -jar ./target/jenkins-test-${imagesVersion}.jar &"
+               sh "nohup java -jar ./target/jenkins-test-${imagesVersion}.jar > ./nohup.out &"
             }
         }
 
